@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "keywords": "",
+  "description": "",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/FaultyTwo/"
+  },
+  "authors": 
+  [
+    {
+      "name": "Chawin 'Faultytwo' Treesugol",
+      "email": "-",
+      "url": "https://github.com/FaultyTwo",
+      "maintainer": true
+    }
+  ],
+  "version": "1.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}

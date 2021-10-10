@@ -1,0 +1,9 @@
+# Datatypes (KEYWORD1)
+# Datatypes for public stuffs
+MAX517 KEYWORD1
+
+# Methods & Functions (KEYWORD2)
+setDac KEYWORD2
+
+# LITERALS (LITERAL1)
+POWER_ON LITERAL1 powerConfig RESERVED_WORD2
