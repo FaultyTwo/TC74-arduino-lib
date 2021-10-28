@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "keywords": "",
-  "description": "",
+  "name": "TC74-arduino-lib",
+  "keywords": "I2C, Temperature, Thermal, Tiny, Digital",
+  "description": "An Arduino Library for TC74, Digital Temperature Sensor",
   "repository":
   {
     "type": "git",
