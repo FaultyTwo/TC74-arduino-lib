@@ -1,5 +1,13 @@
-// TC74-Example
-// - FaultyTwo
+/* TC74-Example
+ * Author: Chawin 'FaultyTwo' Treesugol
+ * Date: 10/29/2021
+ * FROM: https://github.com/FaultyTwo/TC74-arduino-lib
+ * 
+ * Desc: A very basic example of library usage,
+ * covered most of its basic functionality.
+ * 
+ * Enjoy!
+ */
 #include "TC74.h"
 
 TC74 dvc(0x4D); //A5 Address, also default

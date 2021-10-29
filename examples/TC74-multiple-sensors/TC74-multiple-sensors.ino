@@ -1,5 +1,13 @@
-// TC74-Multiple-Sensors-Example
-// - FaultyTwo
+/* TC74-Example
+ * Author: Chawin 'FaultyTwo' Treesugol
+ * Date: 10/29/2021
+ * FROM: https://github.com/FaultyTwo/TC74-arduino-lib
+ * 
+ * Desc: With the power of I2C, 
+ * I bring you the usage of library with multiple temperature sensors!
+ * 
+ * Enjoy!
+ */
 #include "TC74.h"
 #define first 2000
 #define second 2050
