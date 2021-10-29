@@ -42,6 +42,8 @@ float readTemperatureK();
 ```
 Read the temperature from the sensor, return as Kelvin value.
 
+**IF THE DEVICES ARE NOT FOUND OR THE BUS IS CONNECTED INCORRECTLY, ALL ABOVE FUNCTIONS WILL RETURN AS -999.**
+
 ```C
 void TC74Mode(bool mode);
 ```
