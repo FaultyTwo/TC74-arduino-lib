@@ -34,7 +34,7 @@ bool TC74::isStandby(){
   Wire.endTransmission(false);
   Wire.requestFrom(adr,byte(1));
   if(Wire.available()){
-    if(Wire.read() == 0x40){ //1100 0000 or 0100 0000
+    if(Wire.read() == 0x40 || Wire.read() == 0x00){ //0x00 or 0x40
       Wire.endTransmission();
       return false;
     } else {
@@ -43,6 +43,9 @@ bool TC74::isStandby(){
     }
   }
 }
+
+//no need for creating 'isReady' function
+//isStandby also covers the 'data ready' config too
 
 //this might makes transmission cry
 //but precision is everything.. uh, kinda

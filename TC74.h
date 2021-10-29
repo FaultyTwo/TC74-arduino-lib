@@ -25,8 +25,9 @@ class TC74{
 };
 
 /* What does this library need?
+ * - Register config (Yes, supported)
  * - Can read temperature
- * - Standby mode supported
+ * 
  */
 
 

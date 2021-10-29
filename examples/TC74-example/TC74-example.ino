@@ -6,9 +6,10 @@ TC74 dvc(0x4D); //A5 Address, also default
 
 void setup() {
   Serial.begin(9600);
-  while(dvc1.isStandby()){ //wait until the sensor is ready
+  while(dvc.isStandby()){ //wait until the sensor is ready
     
   }
+  Serial.println("Hello TC74!");
 }
 
 void loop() {
