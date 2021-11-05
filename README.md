@@ -25,8 +25,19 @@ Include the library, then simply create a constructor like this:
 #include <TC74.h>
 TC74 tmp(0X4D);
 ```
+Then in the setup function of Arduino IDE:
+```C
+void setup(){
+  tmp.begin();
+  ...
+```
 
 ## Functions
+```C
+void begin();
+```
+Initiate TC74 library.
+
 ```C
 short readTemperatureC();
 ```
@@ -57,8 +68,10 @@ Config the power mode of TC74.
 **NORMAL = Operate in Normal Mode<br>**
 **STANDBY = Operate in Standby Mode (A/D converter is halted and the temperature data registers are frozen until return into normal mode)**
 
+You also can use literals (NORMAL or STANDBY) as boolean value too.
+
 ```C
 bool isStandby();
 ````
-Check if TC74 is in STANDBY mode or not. Return as Boolean.<br>
+Check if TC74 is in STANDBY mode or not.<br>
 This can be used to check if the device is ready for convertion or not.
