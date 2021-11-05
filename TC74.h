@@ -13,21 +13,22 @@
 
 class TC74{
   public:
-    TC74(uint8_t _adr);
+    TC74(uint8_t adr);
     short readTemperatureC();
     float readTemperatureF();
     float readTemperatureK(); //kfc lmao
     void TC74Mode(bool mode);
     bool isStandby();
+    void begin(TwoWire &wirePort = Wire); //ugh
   private:
     short readTemperature();
-    uint8_t adr;
+    uint8_t _adr;
+    TwoWire *_wire; //for different i2c port config
 };
 
 /* What does this library need?
  * - Register config (Yes, supported)
  * - Can read temperature
- * 
  */
 
 

@@ -1,6 +1,6 @@
 /* TC74-Example
  * Author: Chawin 'FaultyTwo' Treesugol
- * Date: 10/29/2021
+ * Date: 11/5/2021
  * FROM: https://github.com/FaultyTwo/TC74-arduino-lib
  * 
  * Desc: A very basic example of library usage,
@@ -13,6 +13,7 @@
 TC74 dvc(0x4D); //A5 Address, also default
 
 void setup() {
+  dvc.begin();
   Serial.begin(9600);
   while(dvc.isStandby()){ //wait until the sensor is ready
     

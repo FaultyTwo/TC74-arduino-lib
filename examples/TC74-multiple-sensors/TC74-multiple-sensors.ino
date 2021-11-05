@@ -1,6 +1,6 @@
 /* TC74-Example
  * Author: Chawin 'FaultyTwo' Treesugol
- * Date: 10/29/2021
+ * Date: 11/5/2021
  * FROM: https://github.com/FaultyTwo/TC74-arduino-lib
  * 
  * Desc: With the power of I2C, 
@@ -18,6 +18,9 @@ TC74 dvc2(0x4B); //A3 Address
 TC74 dvc3(0x4C); //A4 Address
 
 void setup() {
+  dvc1.begin();
+  dvc2.begin();
+  dvc3.begin();
   Serial.begin(9600);
   while(dvc3.isStandby()){ //wait until all devices are ready
     
