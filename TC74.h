@@ -1,5 +1,5 @@
 #ifndef TC74_ft
-#define TC74_t
+#define TC74_ft
 
 #include "Arduino.h"
 #include "Wire.h"
