@@ -17,7 +17,7 @@ short TC74::readTemperature(){
   _wire->endTransmission(false);
   _wire->requestFrom(_adr,byte(1));
   if(_wire->available()){
-    val = Wire.read();
+    val = _wire->read();
     _wire->endTransmission();
     return short(val);
   } else {
