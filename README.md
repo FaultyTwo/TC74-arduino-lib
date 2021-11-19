@@ -32,11 +32,11 @@ void setup(){
   ...
 ```
 
-## Functions
+## Methods
 ```C
 void begin();
 ```
-Initiate TC74 library.
+Initiate the TC74 library.
 
 ```C
 short readTemperatureC();
@@ -58,7 +58,7 @@ Read the temperature from the sensor, return as Kelvin value.
 ```C
 void TC74Mode(bool mode);
 ```
-Config the power mode of TC74.
+Configure the power mode of TC74. Accept literals.
 
 | mode | operation |
 |------|-----------|
@@ -68,10 +68,8 @@ Config the power mode of TC74.
 **NORMAL = Operate in Normal Mode<br>**
 **STANDBY = Operate in Standby Mode (A/D converter is halted and the temperature data registers are frozen until return into normal mode)**
 
-You also can use literals (NORMAL or STANDBY) as boolean value too.
-
 ```C
 bool isStandby();
 ````
 Check if TC74 is in STANDBY mode or not.<br>
-This can be used to check if the device is ready for convertion or not.
+This function can be used to check if the device is ready for convertion or not.
