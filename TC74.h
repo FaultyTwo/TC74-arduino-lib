@@ -26,10 +26,4 @@ class TC74{
     TwoWire *_wire; //for different i2c port config
 };
 
-/* What does this library need?
- * - Register config (Yes, supported)
- * - Can read temperature
- */
-
-
 #endif
