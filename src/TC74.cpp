@@ -4,7 +4,7 @@ TC74::TC74(uint8_t adr){
   _adr = adr;
 }
 
-void TC74::begin(TwoWire &wirePort = Wire){
+void TC74::begin(TwoWire &wirePort){
   //for different i2c port
   _wire = &wirePort;
   _wire->begin();
