@@ -20,7 +20,7 @@ For hobby usage. If you desoldered TC74 from some kind of circuits, **please che
 - A7: 0X4F (1001 111X)
 
 ## How To Use The Library
-Include the library, then simply create a constructor like this:
+Include the library, then simply create an object like this:
 ```C
 #include <TC74.h>
 TC74 tmp(0X4D);
