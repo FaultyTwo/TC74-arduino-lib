@@ -38,7 +38,7 @@ void begin(TwoWire &wirePort = Wire);
 ```
 Initiate the TC74 library.
 
-Accept I2C port. For default, just leave the parameter blank.
+Can be configured to use other I2C ports from a 'TwoWire' object. For default I2C port, just leave the parameter blank.
 
 ```C
 short readTemperatureC();
