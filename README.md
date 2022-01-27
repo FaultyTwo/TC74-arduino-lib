@@ -34,9 +34,11 @@ void setup(){
 
 ## Methods
 ```C
-void begin();
+void begin(TwoWire &wirePort = Wire);
 ```
 Initiate the TC74 library.
+
+Accept I2C port. For default, just leave the parameter blank.
 
 ```C
 short readTemperatureC();
