@@ -74,7 +74,7 @@ Read the temperature from the sensor, return as Kelvin value.
 ```C
 void TC74Mode(bool mode);
 ```
-Configure the power mode of TC74. Accept literals.
+Configure the power mode of TC74. Accept literals ('NORMAL' or 'STANDBY').
 
 | mode | operation |
 |------|-----------|
@@ -88,4 +88,4 @@ Configure the power mode of TC74. Accept literals.
 bool isStandby();
 ````
 Check if TC74 is in STANDBY mode or not.<br>
-This function can be used to check if the device is ready for convertion or not.
+This function can be used to check if the device is ready for conversion or not.
