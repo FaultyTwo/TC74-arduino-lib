@@ -3,6 +3,9 @@ An Arduino Library for TC74, Temperature Sensor.
 
 For more technical details, please refer to the [datasheet.](https://ww1.microchip.com/downloads/en/DeviceDoc/21462D.pdf)
 
+## Pinout
+![TC74 pinout](pic/tc74.png)
+
 # TC74 Overview
 TC74 is a thermal sensor with temperature resolution of 1 Celsius and I2C interface.
 
@@ -76,10 +79,10 @@ void TC74Mode(bool mode);
 ```
 Configure the power mode of TC74. Accept literals.
 
-| mode | operation |
-|------|-----------|
-| logic 0 | NORMAL |
-| logic 1 | STANDBY |
+| mode | operation | literals |
+|------|-----------|----------|
+| logic 0 | NORMAL | NORMAL   |
+| logic 1 | STANDBY | STANDBY |
 
 **NORMAL = Operate in Normal Mode<br>**
 **STANDBY = Operate in Standby Mode (A/D converter is halted and the temperature data registers are frozen until return into normal mode)**
