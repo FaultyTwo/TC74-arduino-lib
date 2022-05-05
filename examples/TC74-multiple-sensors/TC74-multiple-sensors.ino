@@ -1,10 +1,10 @@
 /* TC74-Example
  * Author: Chawin 'FaultyTwo' Treesugol
- * Date: 11/5/2021
+ * Date: 5/5/2022
  * FROM: https://github.com/FaultyTwo/TC74-arduino-lib
  * 
  * Desc: With the power of I2C, 
- * I bring you the usage of library with multiple temperature sensors!
+ * I bring you the usage of library with multiple TC4 sensors!
  * 
  * Enjoy!
  */
@@ -34,19 +34,19 @@ void loop() {
   if(millis() - timer1 > first){
     timer1 = millis();
     Serial.print("First sensor : ");
-    Serial.println(dvc1.readTemperatureC());
+    Serial.println(dvc1.readTemperature('c'));
   }
 
   if(millis() - timer2 > second){
     timer2 = millis();
     Serial.print("Second sensor : ");
-    Serial.println(dvc2.readTemperatureC());
+    Serial.println(dvc2.readTemperature('C'));
   }
 
   if(millis() - timer3 > third){
     timer3 = millis();
     Serial.print("Third sensor : ");
-    Serial.println(dvc3.readTemperatureC());
+    Serial.println(dvc3.readTemperature('c'));
     Serial.println();
   }
 }

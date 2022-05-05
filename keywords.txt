@@ -3,9 +3,7 @@
 TC74	KEYWORD1
 
 # Methods & Functions (KEYWORD2)
-readTemperatureC	KEYWORD2
-readTemperatureF	KEYWORD2
-readTemperatureK	KEYWORD2
+readTemperature	KEYWORD2
 TC74Mode	KEYWORD2
 isStandby	KEYWORD2
 

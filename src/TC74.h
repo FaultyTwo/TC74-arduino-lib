@@ -14,14 +14,11 @@
 class TC74{
   public:
     TC74(uint8_t adr);
-    short readTemperatureC();
-    float readTemperatureF();
-    float readTemperatureK(); //kfc lmao
+	float readTemperature(char c);
     void TC74Mode(bool mode);
     bool isStandby();
     void begin(TwoWire &wirePort = Wire); //ugh
   private:
-    short readTemperature();
     uint8_t _adr;
     TwoWire *_wire; //for different i2c port config
 };

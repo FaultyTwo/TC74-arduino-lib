@@ -1,6 +1,6 @@
 /* TC74-Example
  * Author: Chawin 'FaultyTwo' Treesugol
- * Date: 11/5/2021
+ * Date: 5/5/2022
  * FROM: https://github.com/FaultyTwo/TC74-arduino-lib
  * 
  * Desc: A very basic example of library usage,
@@ -23,11 +23,11 @@ void setup() {
 
 void loop() {
   Serial.print("Current Celsius is: ");
-  Serial.println(dvc.readTemperatureC());
+  Serial.println(dvc.readTemperature('c'));
   Serial.print("Current Fahrenheit is: ");
-  Serial.println(dvc.readTemperatureF());
+  Serial.println(dvc.readTemperature('f'));
   Serial.print("Current Kelvin is: ");
-  Serial.println(dvc.readTemperatureK());
+  Serial.println(dvc.readTemperature('k'));
   delay(1500);
   Serial.println();
 }

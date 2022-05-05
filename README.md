@@ -58,21 +58,18 @@ Initiate the TC74 library.
 Can be configured to use other I2C ports from a 'TwoWire' object. For default I2C port, just leave the parameter blank.
 
 ```C
-short readTemperatureC();
+float readTemperature(char c)
 ```
-Read the temperature from the sensor, return as Celsius value.
+Read the temperature from the sensor.
 
-```C
-float readTemperatureF();
-```
-Read the temperature from the sensor, return as Fahrenheit value.
+|   input  | return unit |
+|----------|-------------|
+|'c' or 'C'|   Celsius   |
+|'f' or 'F'|  Fahrenheit |
+|'k' or 'K'|    Kelvin   |
+|  other   |    -999     |
 
-```C
-float readTemperatureK();
-```
-Read the temperature from the sensor, return as Kelvin value.
-
-**IF THE DEVICES ARE NOT FOUND OR THE BUS IS CONNECTED INCORRECTLY, ALL ABOVE FUNCTIONS WILL RETURN AS -999.**
+**If TC74 sensors are connected incorrectly, this method will return -998.**
 
 ```C
 void TC74Mode(bool mode);

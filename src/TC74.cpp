@@ -10,7 +10,7 @@ void TC74::begin(TwoWire &wirePort){
   _wire->begin();
 }
 
-short TC74::readTemperature(){
+float TC74::readTemperature(char c){
   int8_t val; //easiest way for 2's complement
   _wire->beginTransmission(_adr);
   _wire->write(0x00); //I NEED TEMPERATURE
@@ -19,11 +19,25 @@ short TC74::readTemperature(){
   if(_wire->available()){
     val = _wire->read();
     _wire->endTransmission();
-    return short(val);
   } else {
     _wire->endTransmission();
-    return -999; //device not found
+    return -998; //device not found
   }
+
+  switch(c){
+	  case 'c':
+	  case 'C':
+		return float(val);
+	  case 'k':
+	  case 'K':
+		return float(float(val) + 273.15);
+	  case 'f':
+	  case 'F':
+		return float((float(val)*(9.0/5)) + 32);
+	  default:
+		return -999;
+  }
+  
 }
 
 void TC74::TC74Mode(bool mode){
@@ -47,22 +61,4 @@ bool TC74::isStandby(){
       return true;
     }
   }
-}
-
-//no need for creating 'isReady' function
-//isStandby also covers the 'data ready' config too
-
-//this might makes transmission cry
-//but precision is everything.. uh, kinda
-
-short TC74::readTemperatureC(){
-  return readTemperature() == -999 ? -999 : readTemperature();
-}
-
-float TC74::readTemperatureF(){
-  return readTemperature() == -999 ? -999 : (readTemperature()*(9.0/5)) + 32;
-}
-
-float TC74::readTemperatureK(){
-  return readTemperature() == -999 ? -999 : readTemperature() + 273.15;
 }
