@@ -1,11 +1,11 @@
 {
-  "name": "TC74-arduino-lib",
+  "name": "TC74",
   "keywords": "I2C, Temperature, Thermal",
   "description": "An Arduino Library for TC74, Digital Temperature Sensor",
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/FaultyTwo/"
+    "url": "https://github.com/FaultyTwo/TC74-arduino-lib"
   },
   "authors": 
   [
@@ -16,7 +16,7 @@
       "maintainer": true
     }
   ],
-  "version": "1.2",
+  "version": "1.2.1",
   "frameworks": "arduino",
   "platforms": "*"
 }

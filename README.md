@@ -3,13 +3,10 @@ An Arduino Library for TC74, Temperature Sensor.
 
 For more technical details, please refer to the [datasheet.](https://ww1.microchip.com/downloads/en/DeviceDoc/21462D.pdf)
 
-## Pinout
-![TC74 pinout](pic/tc74.png)
-
 # TC74 Overview
 TC74 is a thermal sensor with temperature resolution of 1 Celsius and I2C interface.
 
-TC74 is internally programmed to have a default address (A5). But seven other addresses are available via custom orders.
+TC74 is internally programmed to have a default address (A5). But seven other addresses are available via custom orders.<br>
 For hobby usage. If you desoldered TC74 off from some kind of circuit boards, **check its address before the usage.**
 
 ### TC74 I2C Addresses:
@@ -28,12 +25,7 @@ Include the library, then simply create an object like this:
 #include <TC74.h>
 TC74 tmp(0X4D);
 ```
-Then in the setup function of Arduino IDE:
-```C
-void setup(){
-  tmp.begin();
-  ...
-```
+
 To use this library with other I2C ports, you can simply create a TwoWire object then parse it into the 'begin' function:
 ```C
 // ESP32
@@ -69,7 +61,7 @@ Read the temperature from the sensor.
 |'k' or 'K'|    Kelvin   |
 |  other   |    -999     |
 
-**If TC74 sensors are connected incorrectly, this method will return -998.**
+**^If TC74 sensors are connected incorrectly, this method will return -998.**
 
 ```C
 void TC74Mode(bool mode);
@@ -81,8 +73,8 @@ Configure the power mode of TC74. Accept literals ('NORMAL' or 'STANDBY').
 | logic 0 | NORMAL | NORMAL   |
 | logic 1 | STANDBY | STANDBY |
 
-**NORMAL = Operate in Normal Mode<br>**
-**STANDBY = Operate in Standby Mode (A/D converter is halted and the temperature data registers are frozen until return into normal mode)**
+**^NORMAL = Operate in Normal Mode<br>**
+**^STANDBY = Operate in Standby Mode (A/D converter is halted and the temperature data registers are frozen until return into normal mode)**
 
 ```C
 bool isStandby();
