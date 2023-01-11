@@ -14,10 +14,14 @@
 class TC74{
   public:
     TC74(uint8_t adr);
+	// Read the temperature from the sensor.
 	float readTemperature(char c);
+	// Configure the power mode of TC74.
     void TC74Mode(bool mode);
+	// Check if TC74 is in STANDBY mode or not.
     bool isStandby();
-    void begin(TwoWire &wirePort = Wire); //ugh
+	// Initiate a TC74.
+    void begin(TwoWire &wirePort = Wire);
   private:
     uint8_t _adr;
     TwoWire *_wire; //for different i2c port config
