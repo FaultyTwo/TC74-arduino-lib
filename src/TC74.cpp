@@ -4,17 +4,17 @@ TC74::TC74(uint8_t adr){
   _adr = adr;
 }
 
-void TC74::begin(TwoWire &wirePort){
-  _wire = &wirePort;
+void TC74::begin(TwoWire &wire){
+  _wire = &wire;
   _wire->begin();
 }
 
-float TC74::readTemperature(char c){
+float TC74::readTemperature(char unit){
   int8_t val; //easiest way for 2's complement
   _wire->beginTransmission(_adr);
   _wire->write(0x00); //I NEED TEMPERATURE
   _wire->endTransmission(false);
-  _wire->requestFrom(_adr,byte(1));
+  _wire->requestFrom(_adr, byte(1));
   if(_wire->available()){
     val = _wire->read();
     _wire->endTransmission();
@@ -23,7 +23,7 @@ float TC74::readTemperature(char c){
     return -998; //device not found
   }
 
-  switch(c){
+  switch(unit){
 	  case 'c':
 	  case 'C':
 		return float(val);
@@ -48,7 +48,7 @@ void TC74::TC74Mode(bool mode){
 
 bool TC74::isStandby(){
   _wire->beginTransmission(_adr);
-  _wire->write(0x01); //I NEED ITS CONFIG
+  _wire->write(0x01);
   _wire->endTransmission(false);
   _wire->requestFrom(_adr,byte(1));
   if(_wire->available()){

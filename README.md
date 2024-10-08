@@ -1,13 +1,12 @@
 # TC74
-An Arduino Library for TC74, Temperature Sensor.
+Arduino Library for TC74, Temperature Sensor.
 
 For more technical details, please refer to the [datasheet.](https://ww1.microchip.com/downloads/en/DeviceDoc/21462D.pdf)
 
 # TC74 Overview
 TC74 is a thermal sensor with temperature resolution of 1 Celsius and I2C interface.
 
-TC74 is internally programmed to have a default address (A5). But seven other addresses are available via custom orders.<br>
-For hobby usage. If you desoldered TC74 off from some kind of circuit boards, **check its address before the usage.**
+TC74 is internally programmed to have a default address (A5). But seven other addresses are available too, although the custom orders are required.
 
 ### TC74 I2C Addresses:
 - A0: 0X48 (1001 000X)
@@ -80,4 +79,4 @@ Configure the power mode of TC74. Accept literals ('NORMAL' or 'STANDBY').
 bool isStandby();
 ````
 Check if TC74 is in STANDBY mode or not.<br>
-This function can be used to check if the device is ready for conversion or not too.
+This function can be used to check if the device is ready to be read or not too.

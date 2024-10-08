@@ -8,6 +8,7 @@
  * 
  * Enjoy!
  */
+
 #include "TC74.h"
 #define first 2000
 #define second 2050
@@ -22,7 +23,7 @@ void setup() {
   dvc2.begin();
   dvc3.begin();
   Serial.begin(9600);
-  while(dvc3.isStandby()){ //wait until all devices are ready
+  while(dvc3.isStandby() | dvc2.isStandby() | dvc1.isStandby()){ //wait until all devices are ready
     
   }
   Serial.println("Home Temperature System Engaged");
